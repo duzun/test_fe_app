@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+    </head>
+    <body>
+        <section class="main">
+            <div class="charts">
+                <div class="chart chart-revenue" data-chart="revenue"></div>
+                <div class="chart chart-impressions" data-chart="impressions"></div>
+                <div class="chart chart-visits" data-chart="visits"></div>
+            </div>
+        </section>
+        <script id="chart_tpl" type="text/x-tpl">
+            <div class="chart-inner">
+                <svg height="160" width="160">
+                    <circle class="base-circle" cx="80" cy="80" r="76" fill="none" />
+                    <path class="base-arc" d="M80 4 A 76 76, 0, 0, 1, 141.5 125" stroke="red" stroke-width="8" fill="none" />
+                    <g class="mark">
+                        <line x1="80" y1="10" x2="80" y2="12" />
+                        <line x1="80" y1="150" x2="80" y2="148" />
+                        <line x1="10" y1="80" x2="12" y2="80" />
+                        <line x1="150" y1="80" x2="148" y2="80" />
+                    </g>
+                </svg>
+                <span class="title"></span>
+                <span class="total"><span class="value">0</span><span class="unit"></span></span>
+                <div class="detailed">
+                    <div class="device device-tablet">
+                        <span class="device-type">Tablet</span>
+                        <span class="device-values">
+                            <span class="percentage"><span class="value">0</span><span class="unit_per">%</span></span>
+                            <span class="absolute"><span class="value">0</span><span class="unit"></span></span>
+                        </span>
+                    </div>
+                    <div class="device device-phone">
+                        <span class="device-type">Smartphone</span>
+                        <span class="device-values">
+                            <span class="percentage"><span class="value">0</span><span class="unit_per">%</span></span>
+                            <span class="absolute"><span class="value">0</span><span class="unit"></span></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script data-main="js/app.js" src="js/libs/require.js" charset="utf-8"></script>
+    </body>
+</html>

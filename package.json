@@ -1,0 +1,35 @@
+{
+  "name": "test_fe_app",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dumitru Uzun",
+    "email": "contact@duzun.me",
+    "url": "http://DUzun.Me/"
+  },
+
+  "description": "Test Front-End App",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jasmine-node ./js/spec",
+    "test-dev": "node ./test-dev.js start ./karma.conf.js"
+  },
+  "keywords": [
+    "js",
+    "svg",
+    "html",
+    "css"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "jasmine-node": "2.x",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-requirejs": "^0.2.2",
+    "requirejs": "^2.1.17"
+  }
+}

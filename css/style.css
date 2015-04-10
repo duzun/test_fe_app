@@ -1,0 +1,211 @@
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    position: relative;
+    min-height: 100%;
+    background: transparent;
+    background-color: #fff;
+    color: #222;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main {
+    padding: 15px 30px;
+    max-width: 1024px;
+    margin: 10px auto;
+}
+
+.charts {
+    display: block;
+    position: relative;
+    margin: 5px -15px;
+    text-align: center;
+    /* white-space: nowrap; */
+    border-top: 2px solid #eaeaea;
+    overflow: auto;
+    padding-top: 15px;
+}
+
+.chart {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+    vertical-align: bottom;
+}
+
+.chart .chart-inner {
+    position: relative;
+    width: 265px;
+    height: 210px;
+    margin: 0 auto;
+    border-width: 0;
+    border-bottom: 2px solid #eaeaea;
+}
+.chart .chart-inner:before,
+.chart .chart-inner:after {
+    content: " ";
+    display: table;
+}
+
+@media (min-width:900px) {
+    .chart {
+        width: 33%;
+    }
+}
+
+.chart .title {
+    font-size: 105%;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 48px;
+    line-height: 16px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+.chart .total {
+    font-size: 130%;
+    display: block;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #666666;
+}
+
+.chart .detailed {
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.chart .detailed .device {
+    display: inline-block;
+    width: 49%;
+    font-size: 80%;
+}
+
+.chart .detailed .device.device-tablet {
+    float: left;
+    text-align: left;
+}
+
+.chart .detailed .device.device-phone {
+    float: right;
+    text-align: right;
+}
+
+.chart .detailed .device .device-type {
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+}
+
+.chart .detailed .device .device-values {
+    width: 100%;
+}
+
+.chart .detailed .device .device-values .percentage {
+    padding-right: 10px;
+    font-weight: 600;
+    color: #888;
+    width: 50%;
+}
+
+.chart .detailed .device .device-values .absolute {
+    color: #ccc;
+    width: 50%;
+}
+
+.chart .detailed .device.device-phone .device-values .percentage,
+.chart .detailed .device.device-phone .device-values .absolute {
+    text-align: right;
+}
+
+.chart svg {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+}
+
+.chart svg circle.base-circle {
+    stroke-width: 8;
+}
+.chart svg line.mark {
+    stroke-width: 1;
+}
+/* .chart-revenue colors --------------------------------------- */
+.chart.chart-revenue .detailed .device.device-tablet .device-type {
+    color:  #9dcf4c;
+}
+.chart.chart-revenue svg circle.base-circle {
+    stroke: #9dcf4c;
+}
+
+.chart.chart-revenue .detailed .device.device-phone .device-type {
+    color: #455e1d;
+}
+.chart.chart-revenue svg path.base-arc {
+    stroke: #455e1d;
+}
+.chart.chart-revenue svg g.mark line {
+    stroke: #455e1d;
+}
+
+/* .chart-impressions colors ----------------------------------- */
+.chart.chart-impressions .detailed .device.device-tablet .device-type {
+    color:  #8ec4e0;
+}
+.chart.chart-impressions svg circle.base-circle {
+    stroke: #8ec4e0;
+}
+
+.chart.chart-impressions .detailed .device.device-phone .device-type {
+    color: #2d4c5a;
+}
+.chart.chart-impressions svg path.base-arc {
+    stroke: #2d4c5a;
+}
+.chart.chart-impressions svg g.mark line {
+    stroke: #2d4c5a;
+}
+
+/* .chart-visits colors --------------------------------------- */
+.chart.chart-visits .detailed .device.device-tablet .device-type {
+    color:  #e3be3b;
+}
+.chart.chart-visits svg circle.base-circle {
+    stroke: #e3be3b;
+}
+
+.chart.chart-visits .detailed .device.device-phone .device-type {
+    color: #a24e20;
+}
+.chart.chart-visits svg path.base-arc {
+    stroke: #a24e20;
+}
+.chart.chart-visits svg g.mark line {
+    stroke: #a24e20;
+}
+
+
+
